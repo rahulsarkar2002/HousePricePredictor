@@ -1,0 +1,154 @@
+
+html{
+    background: url(../../public/background.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size:100% 100%;
+    position: fixed;
+    width: 100%;
+    height:  100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.switch-field {
+  display: flex;
+  margin-bottom: 36px;
+  overflow: hidden;
+}
+
+.switch-field input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.switch-field label {
+  background-color: #e4e4e4;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  padding: 8px 16px;
+  margin-right: -1px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+  cursor: pointer;
+}
+
+.switch-field input:checked + label {
+  background-color: #a5dc86;
+  box-shadow: none;
+}
+
+/* Base styles for all screen sizes */
+.Application {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    max-width:  700px; /* Adjust for desired maximum width */
+    background:none;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border: solid white;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    align-items: center;
+    color: white;
+  }
+
+  .heading{
+    text-align: center;
+  }
+
+
+  .location {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px auto;
+  }
+
+  input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+    margin: 10px 0;
+  }
+  
+  .switch-field {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  .switch-field label {
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    background-color: #2b882e;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .button {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .area,
+    .location {
+      width: 80%;
+    }
+  }
+  
+
+
